@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+
+  <h1>
+    <%= postTitle %>
+  </h1><br>
+  <p>
+    <%= postContent %>
+  </p>
+  <form method="POST" action="/blogs/delete/<%=postTitle%>?_method=DELETE">
+    <button class="btn btn-danger change">
+      Delete
+    </button>
+  </form>
+
+  <form method="GET" action="/blogs/update/<%=postTitle%>">
+    <button class="btn btn-info change">
+      Update
+    </button>
+
+
+  </form>
+  <%- include("partials/footer.ejs") %>

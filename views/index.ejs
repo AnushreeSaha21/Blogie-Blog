@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs") %>
+  <% if(locals.posts && locals.posts.length> 0){ %>
+    <h1>Welcome to Blogie Blog</h1><br><br>
+    <div class="product-list">
+
+      <%locals.posts.forEach(function(post) {%>
+        <div class="product-card">
+
+          <div class="product-details">
+            <h2>
+              <%=post.title%>
+            </h2>
+            <img src="../images/<%= post.image %>" alt="<%= post.title %> Image" />
+            <p>
+              <%=post.content.substring(0, 100)+" ..."%> <a href="/blogs/<%=post.title%>">Read More</a>
+            </p>
+
+          </div>
+        </div>
+        <%});%>
+
+    </div>
+
+    <% } else{ %>
+      <h1>Hello!!</h1>
+
+      <p>Dear Visitor,<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to Blogie Blog. It's a Blog Web Application.It does few things which you must
+        not miss to
+        checkout. <br>
+        <br>
+        ⁕ Post Creation: Users will be able to create new posts.<br><br>
+
+        ⁕ Post Viewing: The Blog page allows the user to view all their posts.<br><br>
+
+        ⁕ Post Update/Delete: Users will be able to edit and delete posts as needed.<br><br>
+
+        ⁕ Styling: The application is well-styled and responsive,
+        ensuring a good user experience on both desktop and mobile devices.
+      </p>
+
+      <% } %>
+
+        <%- include("partials/footer.ejs") %>

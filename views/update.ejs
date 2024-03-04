@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Update Post</h1><br>
+
+<form method="POST" action="/blogs/update/<%= postTitle %>">
+  
+  <input type="text" id="title" class="feedback-input" name="title" value="<%= postTitle %>"><br>
+  <textarea id="content" name="content" class="feedback-input" ><%= postContent %></textarea><br>
+
+  <button class="btn btn-primary" type="submit">
+    Update
+  </button>
+</form>
+
+<%- include("partials/footer.ejs") %>

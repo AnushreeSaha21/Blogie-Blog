@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+  <h1>New Blog Post...</h1>
+  <form action="/compose" method="post">
+    <input name="title" type="text" class="feedback-input" placeholder="Title" required />
+
+    <textarea name="content" class="feedback-input" placeholder="Write your blog content here." required></textarea>
+    <input type="submit" value="Publish" />
+  </form>
+  <%- include("partials/footer.ejs") %>
