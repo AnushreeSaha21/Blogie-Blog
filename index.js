@@ -70,7 +70,8 @@ app.get('/blogs/update/:postName', function (req, res) {
       res.render("update.ejs", { postTitle: posts[i].title, postContent: posts[i].content });
     }
   }
-  res.status(404).send("Post not found");
+//  res.status(404).send("Post not found");
+
 });
 
 app.post('/blogs/update/:postName', function (req, res) {
